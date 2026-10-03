@@ -35,9 +35,13 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 1px 20px rgba(0,0,0,0.06)' : 'none',
       }}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 md:px-8">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+        <a
+          href="/"
+          className="flex shrink-0 items-center gap-2 whitespace-nowrap"
+          onClick={() => setIsOpen(false)}
+        >
           <span
             className="font-serif text-xl tracking-tight sm:text-2xl"
             style={{ color: 'var(--color-primary)' }}
@@ -45,7 +49,7 @@ export default function Navbar() {
             Dr. Maya Reynolds
           </span>
           <span
-            className="hidden text-xs sm:inline"
+            className="hidden text-xs lg:inline"
             style={{ color: 'var(--color-ink-light)' }}
           >
             PsyD
@@ -53,12 +57,12 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Links */}
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-4 md:flex lg:gap-8">
           {nav.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
-                className="relative text-sm font-medium transition-colors duration-200 hover:opacity-70"
+                className="relative whitespace-nowrap text-sm font-medium transition-colors duration-200 hover:opacity-70"
                 style={{ color: 'var(--color-ink)' }}
               >
                 {item.label}
@@ -67,10 +71,10 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA (large screens only) */}
         <a
           href="#contact"
-          className="hidden rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:opacity-90 md:inline-block"
+          className="hidden shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:opacity-90 lg:inline-block"
           style={{
             backgroundColor: 'var(--color-accent)',
             color: '#fff',

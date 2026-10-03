@@ -16,8 +16,7 @@ export default function Hero() {
           <Reveal>
             <img
               src={hero.imageLeft}
-              alt="Calm, peaceful woman meditating with plants"
-              className="h-64 w-full object-cover sm:h-80 lg:h-[440px] lg:rounded-r-2xl"
+            alt="Seated person with a hand on their abdomen, practicing body-focused mindfulness"
             />
           </Reveal>
 
